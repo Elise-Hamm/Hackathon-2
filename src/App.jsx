@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import Navigation from "./Components/Navigation";
 
 function App() {
+    document.title = 'Le Mousqueton Futé';
   return (
     <>
     <Navigation/>
@@ -13,6 +14,6 @@ function App() {
       </main>
     </>
   );
-}
+} 
 
 export default App;

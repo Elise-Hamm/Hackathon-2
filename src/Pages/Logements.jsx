@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom';
 import CardL from '../Components/CardsL';
 
 const Logements = () => {
 
    return (
       <div>
-         <CardL />
+         <Link to="/logement">
+            <CardL />
+         </Link>
       </div>
    );
 };
