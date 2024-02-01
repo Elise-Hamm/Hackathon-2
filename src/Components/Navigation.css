@@ -6,11 +6,12 @@
     height: 150px;
 }
 
-.logoNavar{
+.logoNavbar{
     width: 190px;
     padding: 10px;
     
 }
+
 
 .ulNavbar{
     display: flex;
