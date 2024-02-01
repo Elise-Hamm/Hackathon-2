@@ -23,8 +23,10 @@ const Logements = () => {
                <div key={maison.id}>
                   <strong>{maison.nom}</strong>
                   <p>Prix: {maison.prix}</p>
-                  <p>Chambres: {maison.chambres}</p>
-                  <p>Salles de bain: {maison.salles_de_bain}</p>
+                  <p>Ville: {maison.ville}</p>
+                  <p>Description: {maison.description}</p>
+                  <p>Avis: {maison.avis}</p>
+                  <img src={maison.image} alt={maison.nom} />
                </div>
             ))}
          </div>
