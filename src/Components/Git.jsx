@@ -1,4 +1,4 @@
-import "./Git.css";
+import "../styles/Git.css";
 
 function Git() {
   return (

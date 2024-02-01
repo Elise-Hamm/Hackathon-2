@@ -1,4 +1,4 @@
-import "./Navigation.css";
+import "../styles/Navigation.css";
 import logo from "../assets/logo Le Mousquetaire futé.png";
 import { Link } from "react-router-dom";
 
