@@ -17,7 +17,7 @@ function CardA() {
  }, []);
 
     return (
-        <div>
+        <div className="wrapC">
             {activites.map(activite => (
                 <article className="containerC" key={activite.id}>
                     <div>
