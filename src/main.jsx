@@ -14,11 +14,16 @@ import Restaurant from "./Pages/Restaurant.jsx";
 import Restaurants from "./Pages/Restaurants.jsx";
 import Git from "./Components/Git.jsx";
 import Linkedin from "./Components/Linkedin.jsx";
+import Cards from "./Components/CardsA.jsx";
 
 const router = createBrowserRouter([
   {
     element: <App />,
     children: [
+      {
+        path: "/cards",
+        element: <Cards />,
+      },
       {
         path: "/",
         element: <Home />,

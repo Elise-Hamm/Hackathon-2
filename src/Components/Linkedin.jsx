@@ -1,4 +1,4 @@
-import "./Linkedin.css";
+import "../styles/Linkedin.css";
 
 function Linkedin() {
   return (

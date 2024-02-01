@@ -1,9 +1,12 @@
+import CardA from '../Components/CardsA.jsx'
+
 const Activités = () => {
-  return (
-    <div>
-      <h1>Activités</h1>
-    </div>
-  );
+
+   return (
+      <div>
+         <CardA />
+      </div>
+   );
 };
 
 export default Activités;
