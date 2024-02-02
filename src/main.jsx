@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 
-// Pages/////
+// Pages //
 import App from "./App.jsx";
 import Home from "./Pages/Home";
 import Activité from "./Pages/Activité";
@@ -15,11 +15,16 @@ import Restaurants from "./Pages/Restaurants.jsx";
 import Git from "./Components/Git.jsx";
 import Linkedin from "./Components/Linkedin.jsx";
 import Cards from "./Components/CardsA.jsx";
+import Infos from "./Components/InfosA.jsx";
 
 const router = createBrowserRouter([
   {
     element: <App />,
     children: [
+      {
+        path: "/activités/:id",
+        element: <Infos />,
+      },
       {
         path: "/cards",
         element: <Cards />,

@@ -1,16 +1,16 @@
-import CardA from '../Components/CardsA.jsx'
-import "../styles/Activité.css";
+import { Link } from 'react-router-dom';
+import CardA from '../Components/CardsA.jsx';
+import "../styles/Activités.css";
 
 const Activités = () => {
-
    return (
       <div className="containerAc">
          <aside>
             <div className="asideAc"></div>
          </aside>
-         <div>
+         <Link to="/activités/:id" className="buttonAc">
             <CardA />
-         </div>
+         </Link>
       </div>
    );
 };
