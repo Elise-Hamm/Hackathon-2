@@ -28,7 +28,8 @@ const CardL = ({ filtres }) => {
   return (
     <div className="wrapC">
       {maisonsFiltrees.map(maison => (
-        <Link to={{ pathname: `/logement/${maison.id}`, state: { maison } }} key={maison.id}>
+        <Link to={{ pathname: `/logement/${maison.id}`, state: { maison: maison } }} key={maison.id}>
+          {console.log('Maison:', maison)}
           <article className="containerC">
             <div>
               <img className="imgC" src={maison.image} alt={maison.nom} />
