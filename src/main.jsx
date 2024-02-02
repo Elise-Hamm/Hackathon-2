@@ -15,16 +15,11 @@ import Restaurants from "./Pages/Restaurants.jsx";
 import Git from "./Components/Git.jsx";
 import Linkedin from "./Components/Linkedin.jsx";
 import Cards from "./Components/CardsA.jsx";
-import Infos from "./Components/InfosA.jsx";
 
 const router = createBrowserRouter([
   {
     element: <App />,
     children: [
-      {
-        path: "/activités/:id",
-        element: <Infos />,
-      },
       {
         path: "/cards",
         element: <Cards />,
@@ -38,7 +33,7 @@ const router = createBrowserRouter([
         element: <Activités />,
       },
       {
-        path: "/activité",
+        path: "/activité/:id",
         element: <Activité />,
       },
       {

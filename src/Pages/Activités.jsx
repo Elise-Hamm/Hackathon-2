@@ -23,7 +23,7 @@ const Activités = () => {
                <Filtres onFiltreChange={handleFiltreChange} />
             </div>
          </aside>
-         <Link to="/activités/:id" className="buttonAc">
+         <Link to="/activité/:id" className="buttonAc">
             <CardA filtres={filtres} />
          </Link>
       </div>

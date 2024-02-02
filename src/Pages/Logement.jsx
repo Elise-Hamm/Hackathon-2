@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import '../styles/Information.css';
 
 const Logement = () => {
   const [maison, setMaison] = useState(null);
@@ -24,17 +25,51 @@ const Logement = () => {
 
   return (
     <div>
-      <h1>Informations détaillées du logement</h1>
-      <div key={maison.id}>
-        <p>Nom: {maison.nom || 'Non disponible'}</p>
-        <p>Ville: {maison.ville || 'Non disponible'}</p>
-        <p>Avis: {maison.avis || 'Non disponible'}</p>
-        <p>Prix: {maison.prix ? `${maison.prix} écu` : 'Non disponible'}</p>
-        {maison.image && <img src={maison.image} alt={maison.nom} style={{ maxWidth: '100%' }} />}
+      <div className="containerI">
+        <div className="fontimgI">
+          <div className="imgI">
+            <img className="imgeI" src={maison.image} alt={maison.nom} />
+          </div>
+        </div>
+        <div className="infosI">
+          <div className="titleI">
+            <h1>{maison.nom}</h1>
+          </div>
+          <div className="logoI">
+            <div className="firstI">
+              <div className="locaI">
+                <div className="logolocaI"></div>
+                <p>{maison.ville}</p>
+              </div>
+              <div className="clockI">
+              <div className="logoclockI"></div>
+                <p> - </p>
+              </div>
+            </div>
+            <div className="secondI">              
+              <div className="rateI">
+              <div className="logorateI"></div>
+                <p>{maison.avis}</p>
+              </div>
+              <div className="moneyI">
+                <div className="logoecuI"></div>
+                <p>{maison.prix} écu</p>
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
       </div>
-    </div>
   );
 };
 
 export default Logement;
 
+{/* <h1>Informations détaillées du logement</h1>
+<div key={maison.id}>
+  <p>Nom: {maison.nom || 'Non disponible'}</p>
+  <p>Ville: {maison.ville || 'Non disponible'}</p>
+  <p>Avis: {maison.avis || 'Non disponible'}</p>
+  <p>Prix: {maison.prix ? `${maison.prix} écu` : 'Non disponible'}</p>
+  {maison.image && <img src={maison.image} alt={maison.nom} style={{ maxWidth: '100%' }} />}
+</div> */}
