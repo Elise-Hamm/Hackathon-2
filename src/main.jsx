@@ -15,7 +15,6 @@ import Restaurants from "./Pages/Restaurants.jsx";
 import Git from "./Components/Git.jsx";
 import Linkedin from "./Components/Linkedin.jsx";
 import Cards from "./Components/CardsA.jsx";
-import Infos from "./Components/InfosA.jsx";
 
 const router = createBrowserRouter([
   {

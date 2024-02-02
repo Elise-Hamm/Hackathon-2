@@ -1,0 +1,111 @@
+.containerI {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-top:100px;
+    align-items: center;
+}
+
+.fontimgI {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: #9B9EF0 4px solid;
+}
+
+.imgI {
+    margin: 20px;
+}
+
+.imgeI {
+    height:400px;
+    width:400px;
+}
+
+.infosI {
+    display:flex;
+    flex-direction: column;
+    margin-left:50px;
+}
+
+.titleI {
+
+}
+
+.textI {
+
+}
+
+.logoI {
+    display:flex;
+    flex-direction:row;
+    gap:100px;
+    align-items: center;
+}
+
+.firstI {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.locaI {
+    display:flex;
+    flex-direction:row;
+}
+
+.logolocaI {
+    background-image: url(../assets/Loca.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.clockI {
+    display:flex;
+    flex-direction:row;
+}
+
+.logoclockI {
+    background-image: url(../assets/horaire.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.secondI {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.rateI {
+    display:flex;
+    flex-direction:row;
+}
+
+.logorateI {
+    background-image: url(../assets/etoile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.moneyI {
+    display:flex;
+    flex-direction:row;
+}
+
+.logoecuI {
+    background-image: url(../assets/ecu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
