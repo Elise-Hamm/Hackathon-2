@@ -21,12 +21,10 @@ const Logements = () => {
       <div className="containerL">
          <aside>
             <div className="asideL">
-               {/* Intégrer le composant Filtres ici */}
                <Filtres onFiltreChange={handleFiltreChange} />
             </div>
          </aside>
          <div>
-            {/* Intégrer le composant CardL ici et transmettre les filtres */}
             <CardL filtres={filtres} />
          </div>
       </div>
