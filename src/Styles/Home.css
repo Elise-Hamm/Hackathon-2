@@ -6,11 +6,12 @@
     padding: 15px;
     margin: auto; 
     width: 100vh;
+    margin-top:50px;
     
 } 
 
 .img-mousquetaire{
-    height: 500px; 
+    height: 550px; 
     padding: 0 10px;
 }
 
