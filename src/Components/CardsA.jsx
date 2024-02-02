@@ -32,28 +32,30 @@ const activitesFiltrees = activites.filter(activite => {
         <div className="wrapC">
         {activitesFiltrees.map(activite => (
             <Link to={{ pathname: `/activité/${activite.id}`, state: { activite: activite } }} key={activite.id}>
-            <div>
-                <img className="imgC" src={activite.imgA} alt={activite.nom} />
-            </div>
-            <div className="descriptionC">
-                <h2 className="titleC">{activite.nameA}</h2>
-                <div className="infosC">
-                <div className="loraC">
-                    <div className="logoC">
-                    <div className="logolocaC"></div>
-                    <p>{activite.localisationA}</p>
+                <article className="containerC">
+                <div>
+                    <img className="imgC" src={activite.imgA} alt={activite.nom} />
+                </div>
+                <div className="descriptionC">
+                    <h2 className="titleC">{activite.nameA}</h2>
+                    <div className="infosC">
+                    <div className="loraC">
+                        <div className="logoC">
+                        <div className="logolocaC"></div>
+                        <p>{activite.localisationA}</p>
+                        </div>
+                        <div className="logoC">
+                            <div className="logoecuC"></div>
+                            <p>{activite.moneyAA} écu</p>
+                        </div>
+                        </div>
                     </div>
                     <div className="logoC">
                         <div className="logoecuC"></div>
                         <p>{activite.moneyAA} écu</p>
                     </div>
                     </div>
-                </div>
-                <div className="logoC">
-                    <div className="logoecuC"></div>
-                    <p>{activite.moneyAA} écu</p>
-                </div>
-                </div>
+                </article>     
             </Link>
         ))}
         </div>
