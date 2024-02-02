@@ -1,0 +1,11 @@
+.containerL {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.asideL {
+    background-color: #D9D9D9;
+    height: 100%;
+    width: 500px;
+}
