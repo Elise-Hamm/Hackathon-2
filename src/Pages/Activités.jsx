@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import CardA from '../Components/CardsA.jsx';
 import Filtres from '../Components/Filtre.jsx';
@@ -23,9 +22,7 @@ const Activités = () => {
                <Filtres onFiltreChange={handleFiltreChange} />
             </div>
          </aside>
-         <Link to="/activités/:id" className="buttonAc">
             <CardA filtres={filtres} />
-         </Link>
       </div>
    );
 };

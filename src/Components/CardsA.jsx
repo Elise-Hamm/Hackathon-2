@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/Card.css';
+import { Link } from 'react-router-dom';
 
 function CardA({ filtres }) {
 const [activites, setActivites] = useState([]);
@@ -30,7 +31,7 @@ const activitesFiltrees = activites.filter(activite => {
     <div>
         <div className="wrapC">
         {activitesFiltrees.map(activite => (
-            <button className="containerC" key={activite.id}>
+            <Link to={{ pathname: `/activité/${activite.id}`, state: { activite: activite } }} key={activite.id}>
             <div>
                 <img className="imgC" src={activite.imgA} alt={activite.nom} />
             </div>
@@ -53,7 +54,7 @@ const activitesFiltrees = activites.filter(activite => {
                 </div>
                 </div>
             </div>
-            </button>
+            </Link>
         ))}
         </div>
     </div>
