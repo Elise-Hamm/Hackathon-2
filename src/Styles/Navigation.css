@@ -3,11 +3,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 80px;
 }
 
 .logoNavbar{
-    width: 150px;
+    width: 130px;
     padding: 10px;
     
 }
