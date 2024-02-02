@@ -15,7 +15,7 @@ const Home = () => {
         </div>
         <div>
           <p className="text-intro-home">
-            Bienvenu sur nostre site où vous pourrez découvrir une sélection
+            Bienvenue sur nostre site où vous pourrez découvrir une sélection
             exquise d'auberges, de tables raffinées et de divertissements
             authentiques.
             <br />

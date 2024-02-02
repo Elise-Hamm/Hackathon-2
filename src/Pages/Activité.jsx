@@ -1,4 +1,6 @@
 const Activité = () => {
+
+  
   return (
     <div>
       <h1>Activité</h1>
