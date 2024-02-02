@@ -1,29 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Card.css';
 
-function CardA() {
-  const [activites, setActivites] = useState([]);
+function CardA({ filtres }) {
+const [activites, setActivites] = useState([]);
 
 
-  useEffect(() => {
+useEffect(() => {
     fetch('http://localhost:4747/api/activites')
-      .then((response) => {
+        .then((response) => {
         if (!response.ok) {
-          throw new Error(`Erreur HTTP! Statut : ${response.status}`);
+            throw new Error(`Erreur HTTP! Statut : ${response.status}`);
         }
         return response.json();
-      })
-      .then((data) => setActivites(data))
-      .catch((error) =>
+        })
+        .then((data) => setActivites(data))
+        .catch((error) =>
         console.error('Erreur lors de la récupération des activités:', error)
-      );
-  }, []);
+    );
+}, []);
 
+const activitesFiltrees = activites.filter(activite => {
+    return (!filtres.prixMin || activite.moneyAA >= parseInt(filtres.prixMin)) &&
+            (!filtres.prixMax || activite.moneyAA <= parseInt(filtres.prixMax)) &&
+            (!filtres.avisMin || activite.rateA >= parseInt(filtres.avisMin)) &&
+            (!filtres.ville || activite.localisationA.toLowerCase() === filtres.ville.toLowerCase());
+    });
 
-  return (
+    return (
     <div>
-      <div className="wrapC">
-        {activites.map((activite) => (
+        <div className="wrapC">
+        {activitesFiltrees.map(activite => (
             <button className="containerC" key={activite.id}>
             <div>
                 <img className="imgC" src={activite.imgA} alt={activite.nom} />
@@ -51,7 +57,7 @@ function CardA() {
         ))}
         </div>
     </div>
-  );
+    );
 }
 
 export default CardA;
