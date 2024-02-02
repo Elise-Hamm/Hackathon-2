@@ -24,17 +24,51 @@ const Activite = () => {
   }
 
   return (
-    <div className="activite-container">
-      <div className="photo-container">
-        {activite.imgA && <img src={activite.imgA} alt={activite.nameA} />}
+    <div>
+      <div className="containerI">
+        <div className="fontimgI">
+          <div className="imgI">
+            <img className="imgeI" src={activite.imgA} alt={activite.nameA} />
+          </div>
+        </div>
+        <div className="infosI">
+          <div className="titleI">
+            <h1>{activite.nameA}</h1>
+            <p>{activite.textA}</p>
+          </div>
+          <div className="logoI">
+            <div className="firstI">
+              <div className="locaI">
+                <div className="logolocaI"></div>
+                <p>{activite.localisationA}</p>
+              </div>
+              <div className="clockI">
+              <div className="logoclockI"></div>
+                <div className="rowI">
+                  <p>Horaire :</p>
+                  <p>Semaine : {activite.clockSA}</p>
+                  <p>Weekend :{activite.clockWA}</p>
+                </div>  
+              </div>
+            </div>
+            <div className="secondI">              
+              <div className="rateI">
+              <div className="logorateI"></div>
+                <p>{activite.rateA}</p>
+              </div>
+              <div className="moneyI">
+                <div className="logoecuI"></div>
+                <div className="rowI">
+                  <p>Enfant : {activite.moneyEE} écu</p>
+                  <p>Adult : {activite.moneyAE} écu</p>
+                  <p>Famille : {activite.moneyFE} écu</p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
       </div>
-      <div className="info-container">
-        <h1>{activite.nameA || 'Nom non disponible'}</h1>
-        <p>Ville: {activite.localisationA || 'Non disponible'}</p>
-        <p>Avis: {activite.rateA || 'Non disponible'}</p>
-        <p>Prix: {activite.moneyAA || 'Non disponible'}</p>
-      </div>
-    </div>
   );
 };
 
