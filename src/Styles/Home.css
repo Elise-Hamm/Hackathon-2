@@ -1,0 +1,41 @@
+
+.homecontainer{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    padding: 15px;
+    margin: auto; 
+    width: 100vh;
+    margin-top:50px;
+    
+} 
+
+.img-mousquetaire{
+    height: 550px; 
+    padding: 0 10px;
+}
+
+.text-intro-home{
+    text-align: center;
+    background-color: #9b9ef0aa ;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 1.rem;
+   
+    
+}
+
+.cards{
+    display: flex;
+    background-color: #9b9ef0aa;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+

@@ -1,0 +1,30 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9B9EF0;
+  }
+  
+  .left-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer p {
+    margin-right: 10px;
+    color: white;
+  }
+  
+  footer img {
+    max-width: 40px;
+    margin-left: 15px;
+  }

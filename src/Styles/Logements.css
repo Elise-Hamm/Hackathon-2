@@ -1,0 +1,10 @@
+.containerL {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.asideL {
+    height: 100%;
+    width: 500px;
+}
