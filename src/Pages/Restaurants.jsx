@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import CardR from "../Components/CardsR";
 import "../styles/Restaurants.css";
-
+import '../styles/Filtre.css';
 const Restaurants = () => {
+
+ 
+  
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
@@ -19,10 +22,11 @@ const Restaurants = () => {
     fetchRestaurants();
   }, []);
 
+ 
+
   return (
     <div>
       <h1>Restaurants</h1>
-
 
       <ul className="restaurants">
         {restaurants.map((restaurant, index) => (

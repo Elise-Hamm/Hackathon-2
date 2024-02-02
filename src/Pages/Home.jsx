@@ -1,6 +1,8 @@
 import mousquetaire from "../assets/mousquetaire.png";
 import "../Styles/Home.css";
 import taverne from "../assets/taverne.jpg";
+import house from "../assets/medieval-house.jpg";
+import grotte from "../assets/6.png";
 import HomeCard from "../Components/HomeCard";
 import { Link } from "react-router-dom";
 
@@ -33,7 +35,7 @@ const Home = () => {
 
             <Link to="/logements">
               <HomeCard
-                image={taverne}
+                image={house}
                 titre={"Logements"}
                 texte={
                   "Venez prendre prendre quelque soulas dans un de nos logements"
@@ -42,7 +44,7 @@ const Home = () => {
             </Link>
             <Link to="/activités">
               <HomeCard
-                image={taverne}
+                image={grotte}
                 titre={"Activités"}
                 texte={
                   "Venez vous égayer en participant à des activités récréatif"
