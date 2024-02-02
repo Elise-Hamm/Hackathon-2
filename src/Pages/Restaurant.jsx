@@ -25,16 +25,42 @@ const Restaurant = () => {
   }
 
   return (
-    <div className="restaurant-container">
-      <div className="photo-container">
-        {restaurant.image && <img className='img' src={restaurant.image} alt={restaurant.nom} />}
+    <div>
+      <div className="containerI">
+        <div className="fontimgI">
+          <div className="imgI">
+            <img className="imgeI" src={restaurant.image} alt={restaurant.nom} />
+          </div>
+        </div>
+        <div className="infosI">
+          <div className="titleI">
+            <h1>{restaurant.nom}</h1>
+          </div>
+          <div className="logoI">
+            <div className="firstI">
+              <div className="locaI">
+                <div className="logolocaI"></div>
+                <p>{restaurant.ville}</p>
+              </div>
+              <div className="clockI">
+              <div className="logoclockI"></div>
+                <p> - </p>
+              </div>
+            </div>
+            <div className="secondI">              
+              <div className="rateI">
+              <div className="logorateI"></div>
+                <p>{restaurant.avis}</p>
+              </div>
+              <div className="moneyI">
+                <div className="logoecuI"></div>
+                <p>50 - 100 écu</p>
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
       </div>
-      <div className="info-container">
-        <h1>{restaurant.nom || 'Nom non disponible'}</h1>
-        <p>Ville: {restaurant.ville || 'Non disponible'}</p>
-        <p>Avis: {restaurant.avis || 'Non disponible'}</p>
-      </div>
-    </div>
   );
 };
 
