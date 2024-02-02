@@ -22,10 +22,6 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/activités/:id",
-        element: <Infos />,
-      },
-      {
         path: "/cards",
         element: <Cards />,
       },
@@ -38,7 +34,7 @@ const router = createBrowserRouter([
         element: <Activités />,
       },
       {
-        path: "/activité",
+        path: "/activité/:id",
         element: <Activité />,
       },
       {
@@ -54,7 +50,7 @@ const router = createBrowserRouter([
         element: <Restaurants />,
       },
       {
-        path: "/restaurant",
+        path: "/restaurant/:id",
         element: <Restaurant />,
       },
       {
