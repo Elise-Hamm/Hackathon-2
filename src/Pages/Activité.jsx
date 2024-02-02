@@ -1,13 +1,12 @@
-import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const Activite = () => {
-  const [activite, setActivite] = useState(null); // Initialise avec null au lieu de []
-
+  const [activite, setActivite] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4747/api/activite/${id}`)
+    fetch(`http://localhost:4747/api/activites/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Erreur HTTP! Statut : ${response.status}`);
@@ -15,22 +14,25 @@ const Activite = () => {
         return response.json();
       })
       .then((data) => setActivite(data))
-      .catch((error) => console.error('Erreur lors de la récupération de la maison:', error));
+      .catch((error) =>
+        console.error('Erreur lors de la récupération des activités:', error)
+      );
   }, [id]);
 
-  if (activite === null) { // Utilise strictement l'égalité (===) ici
-    return <p>Erreur: Les informations de la activite ne sont pas disponibles.</p>;
+  if (!activite) {
+    return <p>Erreur: Les informations du restaurant ne sont pas disponibles.</p>;
   }
 
   return (
-    <div>
-      <h1>Informations détaillées de l activité</h1>
-      <div key={activite.id}>
-        <p>Nom: {activite.nameA || 'Non disponible'}</p>
-        <p>Ville: {activite.locationA || 'Non disponible'}</p>
+    <div className="activite-container">
+      <div className="photo-container">
+        {activite.imgA && <img src={activite.imgA} alt={activite.nameA} />}
+      </div>
+      <div className="info-container">
+        <h1>{activite.nameA || 'Nom non disponible'}</h1>
+        <p>Ville: {activite.localisationA || 'Non disponible'}</p>
         <p>Avis: {activite.rateA || 'Non disponible'}</p>
-        <p>Prix: {activite.moneyAA ? `${activite.moneyAA} écu` : 'Non disponible'}</p>
-        {activite.imgA && <img src={activite.imgA} alt={activite.nom} style={{ maxWidth: '100%' }} />}
+        <p>Prix: {activite.moneyAA || 'Non disponible'}</p>
       </div>
     </div>
   );

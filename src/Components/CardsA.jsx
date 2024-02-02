@@ -31,23 +31,17 @@ const activitesFiltrees = activites.filter(activite => {
     <div>
         <div className="wrapC">
         {activitesFiltrees.map(activite => (
-            <Link to={{ pathname: `/activités/${activite.id}`, state: { activite: activite } }} key={activite.id}>
-                <button className="containerC" key={activite.id}>
-                <div>
-                    <img className="imgC" src={activite.imgA} alt={activite.nom} />
-                </div>
-                <div className="descriptionC">
-                    <h2 className="titleC">{activite.nameA}</h2>
-                    <div className="infosC">
-                    <div className="loraC">
-                        <div className="logoC">
-                        <div className="logolocaC"></div>
-                        <p>{activite.localisationA}</p>
-                        </div>
-                        <div className="logoC">
-                        <div className="logorateC"></div>
-                        <p>{activite.rateA}</p>
-                        </div>
+            <Link to={{ pathname: `/activité/${activite.id}`, state: { activite: activite } }} key={activite.id}>
+            <div>
+                <img className="imgC" src={activite.imgA} alt={activite.nom} />
+            </div>
+            <div className="descriptionC">
+                <h2 className="titleC">{activite.nameA}</h2>
+                <div className="infosC">
+                <div className="loraC">
+                    <div className="logoC">
+                    <div className="logolocaC"></div>
+                    <p>{activite.localisationA}</p>
                     </div>
                     <div className="logoC">
                         <div className="logoecuC"></div>
@@ -55,7 +49,11 @@ const activitesFiltrees = activites.filter(activite => {
                     </div>
                     </div>
                 </div>
-                </button>
+                <div className="logoC">
+                    <div className="logoecuC"></div>
+                    <p>{activite.moneyAA} écu</p>
+                </div>
+                </div>
             </Link>
         ))}
         </div>

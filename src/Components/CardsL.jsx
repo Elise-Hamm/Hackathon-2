@@ -17,7 +17,6 @@ const CardL = ({ filtres }) => {
       .catch(error => console.error('Erreur lors de la récupération des maisons:', error));
   }, []);
 
-  // Filtrer les maisons en fonction des critères
   const maisonsFiltrees = maisons.filter(maison => {
     return (!filtres.prixMin || maison.prix >= parseInt(filtres.prixMin)) &&
            (!filtres.prixMax || maison.prix <= parseInt(filtres.prixMax)) &&
@@ -29,7 +28,6 @@ const CardL = ({ filtres }) => {
     <div className="wrapC">
       {maisonsFiltrees.map(maison => (
         <Link to={{ pathname: `/logement/${maison.id}`, state: { maison: maison } }} key={maison.id}>
-          {console.log('Maison:', maison)}
           <article className="containerC">
             <div>
               <img className="imgC" src={maison.image} alt={maison.nom} />

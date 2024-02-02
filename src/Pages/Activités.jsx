@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CardA from '../Components/CardsA.jsx';
 import Filtres from '../Components/Filtre.jsx';
 import '../styles/Filtre.css';
@@ -23,9 +23,7 @@ const Activités = () => {
                <Filtres onFiltreChange={handleFiltreChange} />
             </div>
          </aside>
-         <Link to="/activité/:id" className="buttonAc">
             <CardA filtres={filtres} />
-         </Link>
       </div>
    );
 };
