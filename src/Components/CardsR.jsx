@@ -38,6 +38,7 @@ function CardR({ filtres }) {
                   state: { restaurant: restaurant },
                 }}
               >
+                <article className="containerC">
                 <img
                   className="imgC"
                   src={restaurant.image}
@@ -62,6 +63,7 @@ function CardR({ filtres }) {
                     </div>
                   </div>
                 </div>
+                </article>
               </Link>
             </div>
           ))}
