@@ -17,7 +17,6 @@ const CardL = ({ filtres }) => {
       .catch(error => console.error('Erreur lors de la récupération des maisons:', error));
   }, []);
 
-  // Filtrer les maisons en fonction des critères
   const maisonsFiltrees = maisons.filter(maison => {
     return (!filtres.prixMin || maison.prix >= parseInt(filtres.prixMin)) &&
            (!filtres.prixMax || maison.prix <= parseInt(filtres.prixMax)) &&
