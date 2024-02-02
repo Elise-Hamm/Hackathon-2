@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+
 const Restaurant = () => {
   const [restaurant, setRestaurant] = useState([]);
   const { id } = useParams();
@@ -26,7 +27,7 @@ const Restaurant = () => {
   return (
     <div className="restaurant-container">
       <div className="photo-container">
-        {restaurant.image && <img src={restaurant.image} alt={restaurant.nom} />}
+        {restaurant.image && <img className='img' src={restaurant.image} alt={restaurant.nom} />}
       </div>
       <div className="info-container">
         <h1>{restaurant.nom || 'Nom non disponible'}</h1>
