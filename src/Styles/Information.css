@@ -28,7 +28,7 @@
 }
 
 .titleI {
-
+     width:800px;
 }
 
 .textI {
@@ -39,7 +39,6 @@
     display:flex;
     flex-direction:row;
     gap:100px;
-    align-items: center;
 }
 
 .firstI {
@@ -60,6 +59,13 @@
     height: 30px;
     width: 30px;
     margin-right: 5px;
+}
+
+.rowI {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
 }
 
 .clockI {
